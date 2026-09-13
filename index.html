@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Henri Birrer | AI Web Development</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        nav a {
+            color: #4b5563;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        /* Startseite */
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #eef4ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            font-size: 21px;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        /* Allgemeine Bereiche */
+
+        section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 25px;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 34px;
+            color: #111827;
+            margin-bottom: 35px;
+        }
+
+        /* Über mich */
+
+        .about-box {
+            background: white;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .about-box p {
+            font-size: 18px;
+            color: #4b5563;
+        }
+
+        /* Fähigkeiten */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .skill h3 {
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        /* Projekte */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .project h3 {
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #6b7280;
+        }
+
+        /* Kontakt */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #6b7280;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Handy */
+
+        @media (max-width: 600px) {
+
+            nav {
+                padding: 15px 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <div class="logo">Henri Birrer</div>
+
+        <div>
+            <a href="#ueber-mich">Über mich</a>
+            <a href="#faehigkeiten">Skills</a>
+            <a href="#projekte">Projekte</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </nav>
+
+
+    <!-- Startseite -->
+
+    <header class="hero">
+        <div class="hero-content">
+
+            <h1>Hallo, ich bin <span>Henri Birrer</span></h1>
+
+            <p>
+                Schüler & AI Web Developer
+            </p>
+
+            <a href="#projekte" class="button">
+                Meine Projekte
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- Über mich -->
+
+    <section id="ueber-mich">
+
+        <h2>Über mich</h2>
+
+        <div class="about-box">
+
+            <p>
+                Ich besuche das Gymnasium und interessiere mich besonders
+                für moderne Technologie, künstliche Intelligenz und
+                Webentwicklung.
+            </p>
+
+            <br>
+
+            <p>
+                Mit Hilfe von KI entwickle ich Webseiten und lerne dabei
+                immer mehr über HTML, CSS, Webdesign und moderne
+                AI-Web-Development-Technologien.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="faehigkeiten">
+
+        <h2>Meine Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Aufbau moderner Webseiten</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Design und Layout</p>
+            </div>
+
+            <div class="skill">
+                <h3>AI Development</h3>
+                <p>Entwicklung mit künstlicher Intelligenz</p>
+            </div>
+
+            <div class="skill">
+                <h3>Webdesign</h3>
+                <p>Moderne und übersichtliche Webseiten</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projekte -->
+
+    <section id="projekte">
+
+        <h2>Meine Projekte</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Projekt folgt</h3>
+
+                <p>
+                    Hier wird später eines meiner ersten
+                    Webentwicklungs-Projekte vorgestellt.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Projekt folgt</h3>
+
+                <p>
+                    Dieser Bereich ist für ein weiteres
+                    zukünftiges Projekt reserviert.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Projekt folgt</h3>
+
+                <p>
+                    Weitere Projekte werden hier später ergänzt.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Kontakt -->
+
+    <section id="kontakt" class="contact">
+
+        <h2>Kontakt</h2>
+
+        <p>
+            Du möchtest mich kontaktieren?
+        </p>
+
+        <a
+            href="mailto:henribirrer@gmail.com"
+            class="button"
+        >
+            E-Mail schreiben
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Henri Birrer · AI Web Development
+        </p>
+
+    </footer>
+
+</body>
+</html>
