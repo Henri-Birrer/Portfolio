@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nordlicht Café | Kaffee, Genuss & gute Momente</title>
+
+    <style>
+
+        /* =========================================
+           GRUNDLAGEN
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f3ed;
+            color: #172a22;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        :root {
+            --dark-green: #102a20;
+            --green: #17382b;
+            --cream: #f5f3ed;
+            --light-green: #e2e8e0;
+            --white: #ffffff;
+            --muted: #68736d;
+            --border: #dfe2dc;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .top-nav {
+            height: 72px;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            border-bottom: 1px solid #e7e8e3;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-symbol {
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        .brand-name {
+            font-family: Georgia, serif;
+            font-size: 15px;
+            letter-spacing: 4px;
+            line-height: 1;
+        }
+
+        .brand-small {
+            display: block;
+            font-family: Arial, sans-serif;
+            font-size: 7px;
+            letter-spacing: 4px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 11px;
+            color: #34433c;
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #0c3827;
+        }
+
+        .nav-button {
+            background: var(--dark-green);
+            color: white !important;
+
+            padding: 11px 18px;
+
+            border-radius: 6px;
+
+            transition: 0.25s;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            background: #1b4434;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 600px;
+
+            display: flex;
+            align-items: center;
+
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(10, 27, 20, 0.82),
+                    rgba(10, 27, 20, 0.45),
+                    rgba(10, 27, 20, 0.08)
+                ),
+                url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1900&q=90");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 680px;
+            padding: 80px 8%;
+            color: white;
+        }
+
+        .eyebrow {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 18px;
+            opacity: 0.85;
+        }
+
+        .hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(50px, 7vw, 82px);
+            line-height: 0.97;
+            font-weight: normal;
+            margin-bottom: 27px;
+        }
+
+        .hero p {
+            max-width: 450px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+
+            background: white;
+            color: var(--dark-green);
+
+            padding: 14px 21px;
+
+            border-radius: 6px;
+
+            font-size: 11px;
+            font-weight: bold;
+
+            transition: 0.25s;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================
+           ALLGEMEINE SEKTIONEN
+        ========================================= */
+
+        .section {
+            padding: 90px 8%;
+        }
+
+        .white {
+            background: white;
+        }
+
+        .green-light {
+            background: var(--light-green);
+        }
+
+        .section-label {
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #6a756e;
+            margin-bottom: 9px;
+        }
+
+        .section-title {
+            font-family: Georgia, serif;
+            font-size: 39px;
+            line-height: 1.1;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+
+        .section-intro {
+            max-width: 620px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           ÜBER UNS
+        ========================================= */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-text p {
+            max-width: 520px;
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            height: 390px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .dark-button {
+            display: inline-block;
+
+            margin-top: 12px;
+
+            background: var(--dark-green);
+            color: white;
+
+            padding: 12px 19px;
+
+            border-radius: 6px;
+
+            font-size: 10px;
+
+            transition: 0.25s;
+        }
+
+        .dark-button:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           UNSER ANSPRUCH
+        ========================================= */
+
+        .values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .values-image {
+            height: 390px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .value-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 40px;
+        }
+
+        .value {
+            padding: 0 22px;
+            border-left: 1px solid #ccd3cc;
+        }
+
+        .value:first-child {
+            padding-left: 0;
+            border-left: none;
+        }
+
+        .value-icon {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .value h3 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .value p {
+            color: var(--muted);
+            font-size: 10px;
+        }
+
+
+        /* =========================================
+           SPEISEKARTE
+        ========================================= */
+
+        .menu-section {
+            padding: 100px 8%;
+            background: #f7f5ef;
+        }
+
+        .menu-heading {
+            margin-bottom: 50px;
+        }
+
+
+        /* =========================================
+           KATEGORIE-NAVIGATION
+        ========================================= */
+
+        .category-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-bottom: 55px;
+        }
+
+        .category-navigation a {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            padding: 11px 17px;
+
+            border-radius: 5px;
+
+            font-size: 11px;
+
+            transition: 0.25s;
+        }
+
+        .category-navigation a:hover {
+            background: var(--dark-green);
+            color: white;
+            border-color: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           PRODUKT-KATEGORIE
+        ========================================= */
+
+        .menu-category {
+            scroll-margin-top: 100px;
+            margin-bottom: 85px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+
+            margin-bottom: 25px;
+
+            border-bottom: 1px solid #d9ddd7;
+
+            padding-bottom: 17px;
+        }
+
+        .category-header h3 {
+            font-family: Georgia, serif;
+            font-size: 29px;
+            font-weight: normal;
+        }
+
+        .category-header p {
+            font-size: 11px;
+            color: var(--muted);
+            max-width: 400px;
+            text-align: right;
+        }
+
+
+        /* =========================================
+           PRODUKTE
+        ========================================= */
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .product {
+            background: white;
+
+            border: 1px solid #e1e3de;
+
+            border-radius: 7px;
+
+            padding: 20px;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+
+            transition: 0.25s;
+        }
+
+        .product:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 30px rgba(0,0,0,0.06);
+        }
+
+        .product h4 {
+            font-family: Georgia, serif;
+            font-size: 16px;
+            font-weight: normal;
+
+            margin-bottom: 5px;
+        }
+
+        .product p {
+            color: var(--muted);
+            font-size: 10px;
+            max-width: 420px;
+        }
+
+        .price {
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--dark-green);
+            white-space: nowrap;
+        }
+
+
+        /* =========================================
+           BESUCHEN
+        ========================================= */
+
+        .visit {
+            min-height: 360px;
+
+            display: flex;
+            align-items: center;
+
+            background-image:
+                linear-gradient(
+                    90deg,
+                    rgba(10,38,27,0.96),
+                    rgba(10,38,27,0.55),
+                    rgba(10,38,27,0.15)
+                ),
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1900&q=90");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+        .visit-content {
+            padding: 70px 8%;
+        }
+
+        .visit h2 {
+            font-family: Georgia, serif;
+            font-size: 50px;
+            line-height: 1;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+
+        .visit p {
+            max-width: 450px;
+            color: rgba(255,255,255,0.82);
+            font-size: 12px;
+            margin-bottom: 22px;
+        }
+
+        .white-button {
+            display: inline-block;
+
+            background: white;
+            color: var(--dark-green);
+
+            padding: 12px 18px;
+
+            border-radius: 6px;
+
+            font-size: 10px;
+        }
+
+
+        /* =========================================
+           KONTAKT
+        ========================================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) 1.3fr;
+            gap: 20px;
+
+            margin-top: 45px;
+        }
+
+        .contact-item {
+            padding-right: 20px;
+            border-right: 1px solid #d8ddd7;
+        }
+
+        .contact-icon {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .contact-item h3 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            font-size: 16px;
+            margin-bottom: 7px;
+        }
+
+        .contact-item p {
+            color: var(--muted);
+            font-size: 10px;
+            line-height: 1.9;
+        }
+
+        .map {
+            min-height: 180px;
+
+            border-radius: 7px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dce3dc 25%,
+                    #eff1eb 25%,
+                    #eff1eb 50%,
+                    #dce3dc 50%,
+                    #dce3dc 75%,
+                    #eff1eb 75%
+                );
+
+            background-size: 35px 35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map span {
+            font-size: 30px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: var(--dark-green);
+            color: white;
+
+            padding: 40px 8%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .footer-logo {
+            font-family: Georgia, serif;
+            letter-spacing: 3px;
+            font-size: 14px;
+        }
+
+        .footer-text {
+            color: rgba(255,255,255,0.55);
+            font-size: 9px;
+            text-align: center;
+        }
+
+        .socials {
+            font-size: 10px;
+            color: rgba(255,255,255,0.75);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .top-nav {
+                padding: 0 4%;
+            }
+
+            .nav-links {
+                gap: 18px;
+            }
+
+            .section,
+            .menu-section {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .about,
+            .values {
+                grid-template-columns: 1fr;
+            }
+
+            .value-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 750px) {
+
+            .top-nav {
+                height: auto;
+                padding: 17px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 520px;
+            }
+
+            .hero-content {
+                padding: 50px 25px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .section,
+            .menu-section {
+                padding: 65px 22px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .value-list {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .value {
+                border-left: none;
+                border-top: 1px solid #ccd3cc;
+                padding: 20px 0 0;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .category-header {
+                display: block;
+            }
+
+            .category-header p {
+                text-align: left;
+                margin-top: 7px;
+            }
+
+            .category-navigation {
+                gap: 7px;
+            }
+
+            .category-navigation a {
+                font-size: 10px;
+                padding: 9px 12px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-item {
+                border-right: none;
+                border-bottom: 1px solid #d8ddd7;
+                padding-bottom: 20px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<nav class="top-nav">
+
+    <a href="#" class="brand">
+
+        <div class="brand-symbol">
+            △⌃△
+        </div>
+
+        <div class="brand-name">
+            NORDLICHT
+
+            <span class="brand-small">
+                CAFÉ
+            </span>
+        </div>
+
+    </a>
+
+
+    <div class="nav-links">
+
+        <a href="#ueber-uns">
+            Über uns
+        </a>
+
+        <a href="#speisekarte">
+            Speisekarte
+        </a>
+
+        <a href="#kontakt">
+            Kontakt
+        </a>
+
+        <a href="#kontakt" class="nav-button">
+            Tisch reservieren
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Willkommen im Nordlicht Café
+        </div>
+
+        <h1>
+            Kaffee.<br>
+            Genuss.<br>
+            Gute Momente.
+        </h1>
+
+        <p>
+            Ein moderner Treffpunkt für hochwertigen Kaffee,
+            frisches Frühstück und entspanntes Zusammensein.
+        </p>
+
+        <a href="#speisekarte" class="hero-button">
+            Speisekarte entdecken →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     ÜBER UNS
+========================================= -->
+
+<section class="section white" id="ueber-uns">
+
+    <div class="about">
+
+        <div class="about-text">
+
+            <div class="section-label">
+                Über uns
+            </div>
+
+            <h2 class="section-title">
+                Mehr als nur ein Café
+            </h2>
+
+            <p>
+                Das Nordlicht Café ist ein Ort für Menschen,
+                die gutes Essen, hochwertigen Kaffee und eine
+                angenehme Atmosphäre schätzen.
+            </p>
+
+            <p>
+                Wir verbinden moderne Café-Kultur mit regionalen
+                Zutaten und einem unkomplizierten, persönlichen
+                Service.
+            </p>
+
+            <p>
+                Ob Frühstück am Morgen, ein schneller Kaffee
+                zwischendurch oder ein gemütlicher Nachmittag:
+                Bei uns bist du willkommen.
+            </p>
+
+            <a href="#speisekarte" class="dark-button">
+                Speisekarte ansehen →
+            </a>
+
+        </div>
+
+
+        <img
+            class="about-image"
+            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=90"
+            alt="Modernes Café"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     UNSER ANSPRUCH
+========================================= -->
+
+<section class="section green-light">
+
+    <div class="values">
+
+        <img
+            class="values-image"
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=90"
+            alt="Frische Bowl"
+        >
+
+
+        <div>
+
+            <div class="section-label">
+                Was uns ausmacht
+            </div>
+
+            <h2 class="section-title">
+                Unser Anspruch
+            </h2>
+
+            <p class="section-intro">
+                Wir möchten aus jedem Besuch einen
+                angenehmen Moment machen.
+            </p>
+
+
+            <div class="value-list">
+
+                <div class="value">
+
+                    <div class="value-icon">
+                        ♧
+                    </div>
+
+                    <h3>
+                        Frische Zutaten
+                    </h3>
+
+                    <p>
+                        Sorgfältig ausgewählte und
+                        hochwertige Zutaten.
+                    </p>
+
+                </div>
+
+
+                <div class="value">
+
+                    <div class="value-icon">
+                        ☕
+                    </div>
+
+                    <h3>
+                        Guter Kaffee
+                    </h3>
+
+                    <p>
+                        Aromatische Bohnen und
+                        sorgfältige Zubereitung.
+                    </p>
+
+                </div>
+
+
+                <div class="value">
+
+                    <div class="value-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Gute Atmosphäre
+                    </h3>
+
+                    <p>
+                        Ein moderner Ort zum Treffen,
+                        Arbeiten und Genießen.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SPEISEKARTE
+========================================= -->
+
+<section class="menu-section" id="speisekarte">
+
+
+    <div class="menu-heading">
+
+        <div class="section-label">
+            Unser Sortiment
+        </div>
+
+        <h2 class="section-title">
+            Speisekarte
+        </h2>
+
+        <p class="section-intro">
+            Wähle eine Kategorie aus, um direkt zu
+            den entsprechenden Angeboten zu gelangen.
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         KATEGORIEN
+    ====================================== -->
+
+    <div class="category-navigation">
+
+        <a href="#kaffee">
+            ☕ Kaffee
+        </a>
+
+        <a href="#fruehstueck">
+            🥐 Frühstück
+        </a>
+
+        <a href="#bowls">
+            🥗 Bowls & Salate
+        </a>
+
+        <a href="#sandwiches">
+            🥪 Sandwiches
+        </a>
+
+        <a href="#warme-gerichte">
+            🍝 Warme Gerichte
+        </a>
+
+        <a href="#desserts">
+            🍰 Kuchen & Desserts
+        </a>
+
+        <a href="#getraenke">
+            🥤 Kalte Getränke
+        </a>
+
+    </div>
+
+
+
+    <!-- =====================================
+         KAFFEE
+    ====================================== -->
+
+    <div class="menu-category" id="kaffee">
+
+        <div class="category-header">
+
+            <h3>
+                Kaffee
+            </h3>
+
+            <p>
+                Klassische Kaffeespezialitäten
+                und moderne Favoriten.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Espresso
+                    </h4>
+
+                    <p>
+                        Kräftiger Espresso mit
+                        intensiver Crema.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 4.00
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Cappuccino
+                    </h4>
+
+                    <p>
+                        Espresso mit cremigem
+                        Milchschaum.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 5.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Flat White
+                    </h4>
+
+                    <p>
+                        Doppelter Espresso mit fein
+                        aufgeschäumter Milch.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 5.80
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Latte Macchiato
+                    </h4>
+
+                    <p>
+                        Espresso, warme Milch und
+                        feiner Milchschaum.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 5.80
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Americano
+                    </h4>
+
+                    <p>
+                        Espresso mit heißem Wasser.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 4.80
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Hafer Cappuccino
+                    </h4>
+
+                    <p>
+                        Cappuccino mit cremigem
+                        Haferdrink.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 5.80
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         FRÜHSTÜCK
+    ====================================== -->
+
+    <div class="menu-category" id="fruehstueck">
+
+        <div class="category-header">
+
+            <h3>
+                Frühstück
+            </h3>
+
+            <p>
+                Frischer Start in den Tag mit
+                hausgemachten Spezialitäten.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Nordlicht Frühstück
+                    </h4>
+
+                    <p>
+                        Brot, Butter, Käse, Konfitüre,
+                        Ei und frisches Obst.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 15.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Avocado Toast
+                    </h4>
+
+                    <p>
+                        Sauerteigbrot mit Avocado,
+                        Kräutern und pochiertem Ei.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 14.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Joghurt Bowl
+                    </h4>
+
+                    <p>
+                        Naturjoghurt mit Beeren,
+                        Granola und Honig.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 11.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Butter Croissant
+                    </h4>
+
+                    <p>
+                        Frisch gebackenes Croissant
+                        mit Butter und Konfitüre.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 5.50
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         BOWLS & SALATE
+    ====================================== -->
+
+    <div class="menu-category" id="bowls">
+
+        <div class="category-header">
+
+            <h3>
+                Bowls & Salate
+            </h3>
+
+            <p>
+                Frische Zutaten, knackiges Gemüse
+                und ausgewogene Kombinationen.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Green Bowl
+                    </h4>
+
+                    <p>
+                        Avocado, Salat, Gurke, Edamame,
+                        Reis und Kräuterdressing.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 17.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Chicken Bowl
+                    </h4>
+
+                    <p>
+                        Poulet, Reis, Gemüse, Avocado
+                        und Sesam-Dressing.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 19.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Caesar Salat
+                    </h4>
+
+                    <p>
+                        Römersalat, Parmesan, Croutons
+                        und Caesar-Dressing.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 16.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Garden Salat
+                    </h4>
+
+                    <p>
+                        Gemischter Salat mit Tomaten,
+                        Gurke und Hausdressing.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 14.50
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         SANDWICHES
+    ====================================== -->
+
+    <div class="menu-category" id="sandwiches">
+
+        <div class="category-header">
+
+            <h3>
+                Sandwiches
+            </h3>
+
+            <p>
+                Knuspriges Brot und frisch
+                zubereitete Sandwiches.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Nordlicht Club
+                    </h4>
+
+                    <p>
+                        Poulet, Salat, Tomate,
+                        Käse und Hausdressing.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 14.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Avocado Sandwich
+                    </h4>
+
+                    <p>
+                        Avocado, Tomate, Rucola
+                        und Frischkäse.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 13.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Caprese Sandwich
+                    </h4>
+
+                    <p>
+                        Mozzarella, Tomate, Basilikum
+                        und Pesto.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 13.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Grilled Cheese
+                    </h4>
+
+                    <p>
+                        Geröstetes Brot mit geschmolzenem
+                        Käse und Kräutern.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 12.50
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         WARME GERICHTE
+    ====================================== -->
+
+    <div class="menu-category" id="warme-gerichte">
+
+        <div class="category-header">
+
+            <h3>
+                Warme Gerichte
+            </h3>
+
+            <p>
+                Hausgemachte Gerichte für den
+                grossen Hunger.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Pasta Pesto
+                    </h4>
+
+                    <p>
+                        Pasta mit Basilikum-Pesto,
+                        Parmesan und Tomaten.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 18.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Tomaten Pasta
+                    </h4>
+
+                    <p>
+                        Hausgemachte Tomatensauce,
+                        Kräuter und Parmesan.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 17.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Tages-Suppe
+                    </h4>
+
+                    <p>
+                        Frische Suppe nach
+                        saisonalem Angebot.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 10.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Ofenkartoffel
+                    </h4>
+
+                    <p>
+                        Kartoffel mit Kräuterquark,
+                        Salat und Gemüse.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 16.50
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         DESSERTS
+    ====================================== -->
+
+    <div class="menu-category" id="desserts">
+
+        <div class="category-header">
+
+            <h3>
+                Kuchen & Desserts
+            </h3>
+
+            <p>
+                Hausgemachte süsse Spezialitäten
+                für den perfekten Abschluss.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        New York Cheesecake
+                    </h4>
+
+                    <p>
+                        Cremiger Cheesecake mit
+                        Beerenkompott.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 8.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Schokoladenkuchen
+                    </h4>
+
+                    <p>
+                        Saftiger Schokoladenkuchen
+                        mit dunkler Schokolade.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 8.00
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Carrot Cake
+                    </h4>
+
+                    <p>
+                        Hausgemachter Karottenkuchen
+                        mit Frischkäsecreme.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 8.00
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Cookie
+                    </h4>
+
+                    <p>
+                        Warm gebackener Cookie
+                        mit Schokolade.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 4.50
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         KALTE GETRÄNKE
+    ====================================== -->
+
+    <div class="menu-category" id="getraenke">
+
+        <div class="category-header">
+
+            <h3>
+                Kalte Getränke
+            </h3>
+
+            <p>
+                Erfrischende Getränke, hausgemachte
+                Limonaden und Säfte.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Hausgemachte Limonade
+                    </h4>
+
+                    <p>
+                        Zitrone, Minze und
+                        hausgemachter Sirup.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 6.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Eistee Pfirsich
+                    </h4>
+
+                    <p>
+                        Hausgemachter Eistee mit
+                        frischem Pfirsich.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 6.00
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Orangensaft
+                    </h4>
+
+                    <p>
+                        Frisch gepresster
+                        Orangensaft.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 6.50
+                </div>
+
+            </div>
+
+
+            <div class="product">
+
+                <div>
+                    <h4>
+                        Mineralwasser
+                    </h4>
+
+                    <p>
+                        Still oder mit Kohlensäure.
+                    </p>
+                </div>
+
+                <div class="price">
+                    CHF 4.00
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     BESUCHE UNS
+========================================= -->
+
+<section class="visit">
+
+    <div class="visit-content">
+
+        <div class="eyebrow">
+            Besuche uns
+        </div>
+
+        <h2>
+            Lust auf eine<br>
+            Pause?
+        </h2>
+
+        <p>
+            Komm vorbei und gönne dir einen
+            besonderen Moment im Nordlicht Café.
+        </p>
+
+        <a href="#kontakt" class="white-button">
+            Kontakt & Öffnungszeiten →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     KONTAKT
+========================================= -->
+
+<section class="section white" id="kontakt">
+
+    <div class="section-label">
+        Kontakt
+    </div>
+
+    <h2 class="section-title">
+        Kontakt & Öffnungszeiten
+    </h2>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-item">
+
+            <div class="contact-icon">
+                📍
+            </div>
+
+            <h3>
+                Adresse
+            </h3>
+
+            <p>
+                Bahnhofstrasse 10<br>
+                6003 Luzern<br>
+                Schweiz
+            </p>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <div class="contact-icon">
+                ◷
+            </div>
+
+            <h3>
+                Öffnungszeiten
+            </h3>
+
+            <p>
+                Montag – Freitag<br>
+                08:00 – 19:00 Uhr<br><br>
+
+                Samstag<br>
+                09:00 – 17:00 Uhr
+            </p>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <div class="contact-icon">
+                ☎
+            </div>
+
+            <h3>
+                Kontakt
+            </h3>
+
+            <p>
+                +41 41 123 45 67<br>
+                hallo@nordlicht-cafe.ch
+            </p>
+
+        </div>
+
+
+        <div class="map">
+            <span>📍</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        NORDLICHT CAFÉ
+    </div>
+
+    <div class="footer-text">
+        © 2026 Nordlicht Café · Beispielprojekt
+        · Website-Konzept & Entwicklung: Henri Birrer
+    </div>
+
+    <div class="socials">
+        Instagram · Facebook
+    </div>
+
+</footer>
+
+
+</body>
+</html>
