@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexusAI | All-in-One KI Business Platform</title>
+    <title>NexusAI | All-in-One AI Business Platform</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
         body { background: #0b0f19; color: #f3f4f6; line-height: 1.6; }
@@ -75,62 +75,62 @@
         <div class="logo">NexusAI</div>
         <div class="nav-links">
             <a href="#demo">Live Demo</a>
-            <a href="#rechner">Preisrechner</a>
-            <a href="#kontakt">Support</a>
+            <a href="#calculator">Pricing Calculator</a>
+            <a href="#contact">Support</a>
         </div>
     </nav>
 
     <header class="hero">
         <div class="badge">✦ Next-Gen AI Automation 2026</div>
-        <h1>Skaliere dein Business mit <span>Künstlicher Intelligenz</span></h1>
-        <p>Generiere Marketing-Texte, analysiere Kundendaten und erstelle automatisierte Workflows in Sekunden.</p>
+        <h1>Scale Your Business with <span>Artificial Intelligence</span></h1>
+        <p>Generate marketing texts, analyze customer data, and build automated workflows in seconds.</p>
     </header>
 
     <section id="demo">
-        <h2 class="section-title">Interaktives Live-Dashboard</h2>
+        <h2 class="section-title">Interactive Live Dashboard</h2>
         <div class="dashboard-container">
             <div class="dashboard-grid">
                 
                 <div class="sidebar">
                     <div class="menu-item active" onclick="switchTab(event, 'text-gen')">✍️ Text Generator</div>
-                    <div class="menu-item" onclick="switchTab(event, 'analytics')">📊 Live-Analysen</div>
-                    <div class="menu-item" onclick="switchTab(event, 'settings')">⚙️ AI-Modell Wahl</div>
+                    <div class="menu-item" onclick="switchTab(event, 'analytics')">📊 Live Analytics</div>
+                    <div class="menu-item" onclick="switchTab(event, 'settings')">⚙️ AI Model Selection</div>
                 </div>
 
                 <div class="main-content">
                     
                     <div id="text-gen" class="tab-content active">
-                        <h3>KI-Text-Generator</h3>
-                        <p style="color: #9ca3af; font-size: 13px; margin-top: 4px;">Gib ein Thema ein, um automatisch Social-Media-Posts zu generieren.</p>
-                        <textarea id="prompt-input" rows="3" placeholder="z.B. Neueröffnungs-Post für eine Pizzeria..."></textarea>
-                        <button class="btn" onclick="generateText()">KI-Text erstellen</button>
-                        <div id="text-output" class="output-box">Warte auf Eingabe...</div>
+                        <h3>AI Text Generator</h3>
+                        <p style="color: #9ca3af; font-size: 13px; margin-top: 4px;">Enter a topic to automatically generate social media posts.</p>
+                        <textarea id="prompt-input" rows="3" placeholder="e.g., Grand opening post for a pizzeria..."></textarea>
+                        <button class="btn" onclick="generateText()">Create AI Text</button>
+                        <div id="text-output" class="output-box">Waiting for input...</div>
                     </div>
 
                     <div id="analytics" class="tab-content">
                         <h3>Live Performance Data</h3>
-                        <p style="color: #9ca3af; font-size: 13px; margin-bottom: 15px; margin-top: 4px;">Echtzeit-Statistiken deiner KI-Systeme.</p>
+                        <p style="color: #9ca3af; font-size: 13px; margin-bottom: 15px; margin-top: 4px;">Real-time statistics of your AI systems.</p>
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; text-align: center;">
                             <div style="background: #111827; padding: 15px; border-radius: 8px;">
                                 <div style="font-size: 24px; font-weight: bold; color: #60a5fa;">98.4%</div>
-                                <div style="color: #9ca3af; font-size: 12px;">Genauigkeit</div>
+                                <div style="color: #9ca3af; font-size: 12px;">Accuracy</div>
                             </div>
                             <div style="background: #111827; padding: 15px; border-radius: 8px;">
                                 <div style="font-size: 24px; font-weight: bold; color: #a855f7;">1,420</div>
-                                <div style="color: #9ca3af; font-size: 12px;">Anfragen / Tag</div>
+                                <div style="color: #9ca3af; font-size: 12px;">Requests / Day</div>
                             </div>
                         </div>
                     </div>
 
                     <div id="settings" class="tab-content">
-                        <h3>Modell-Konfiguration</h3>
-                        <p style="color: #9ca3af; font-size: 13px; margin-top: 4px;">Wähle die passende KI-Engine für deine Anforderungen.</p>
+                        <h3>Model Configuration</h3>
+                        <p style="color: #9ca3af; font-size: 13px; margin-top: 4px;">Choose the appropriate AI engine for your requirements.</p>
                         <select id="model-select" onchange="updateModelInfo()">
-                            <option value="Nexus-Fast (Standard)">Nexus-Fast (Hohe Geschwindigkeit)</option>
-                            <option value="Nexus-Pro (Empfohlen)">Nexus-Pro (Erweiterte Logik)</option>
-                            <option value="Nexus-Ultra (Maximal)">Nexus-Ultra (Komplexe Analysen)</option>
+                            <option value="Nexus-Fast (Standard)">Nexus-Fast (High Speed)</option>
+                            <option value="Nexus-Pro (Recommended)">Nexus-Pro (Advanced Logic)</option>
+                            <option value="Nexus-Ultra (Maximum)">Nexus-Ultra (Complex Analytics)</option>
                         </select>
-                        <div id="model-status" style="color: #60a5fa; font-size: 13px;">Aktuell gewählt: Nexus-Fast (Standard)</div>
+                        <div id="model-status" style="color: #60a5fa; font-size: 13px;">Currently selected: Nexus-Fast (Standard)</div>
                     </div>
 
                 </div>
@@ -138,24 +138,24 @@
         </div>
     </section>
 
-    <section id="rechner">
-        <h2 class="section-title">Dynamischer Tarif-Rechner</h2>
+    <section id="calculator">
+        <h2 class="section-title">Dynamic Pricing Calculator</h2>
         <div class="calc-box">
-            <h3>Berechne deine monatlichen Kosten</h3>
-            <p style="color: #9ca3af; font-size: 14px; margin-top: 5px;">Wähle die Anzahl deiner monatlichen KI-Anfragen:</p>
+            <h3>Calculate Your Monthly Costs</h3>
+            <p style="color: #9ca3af; font-size: 14px; margin-top: 5px;">Select the number of your monthly AI requests:</p>
             
             <div class="slider-group">
                 <input type="range" id="usage-slider" min="1000" max="100000" step="1000" value="10000" oninput="calculatePrice()">
-                <div style="margin-top: 10px; font-weight: bold; font-size: 15px;"><span id="usage-value">10.000</span> Anfragen / Monat</div>
+                <div style="margin-top: 10px; font-weight: bold; font-size: 15px;"><span id="usage-value">10,000</span> Requests / Month</div>
             </div>
 
-            <div class="price-tag"><span id="price-output">29</span> € / Monat</div>
-            <button class="btn" style="max-width: 300px;">Jetzt Tarif buchen</button>
+            <div class="price-tag"><span id="price-output">29</span> € / Month</div>
+            <button class="btn" style="max-width: 300px;">Book Plan Now</button>
         </div>
     </section>
 
-    <footer id="kontakt">
-        <p>© 2026 NexusAI Platforms · Erstellt von Henri Birrer (AI Web Developer)</p>
+    <footer id="contact">
+        <p>© 2026 NexusAI Platforms · Created by Henri Birrer (AI Web Developer)</p>
     </footer>
 
     <script>
@@ -172,26 +172,26 @@
             const output = document.getElementById('text-output');
             
             if (!prompt) {
-                output.textContent = "⚠️ Bitte gib zuerst ein Thema ein!";
+                output.textContent = "⚠️ Please enter a topic first!";
                 return;
             }
 
-            output.textContent = "🤖 KI analysiert deine Eingabe...";
+            output.textContent = "🤖 AI is analyzing your input...";
             
             setTimeout(() => {
-                const intro = ["🚀 Neuheit:", "🔥 Highlights zu", "💡 Dein Guide für"][Math.floor(Math.random() * 3)];
-                output.textContent = `✨ [KI-Entwurf]: "${intro} ${prompt}! Jetzt entdecken, ausprobieren und profitieren. Mehr Infos auf unserer Website!"`;
+                const intro = ["🚀 New:", "🔥 Highlights for", "💡 Your guide to"][Math.floor(Math.random() * 3)];
+                output.textContent = `✨ [AI Draft]: "${intro} ${prompt}! Discover now, try it out, and benefit. More info on our website!"`;
             }, 800);
         }
 
         function updateModelInfo() {
             const val = document.getElementById('model-select').value;
-            document.getElementById('model-status').textContent = "Aktuell gewählt: " + val;
+            document.getElementById('model-status').textContent = "Currently selected: " + val;
         }
 
         function calculatePrice() {
             const val = parseInt(document.getElementById('usage-slider').value);
-            document.getElementById('usage-value').textContent = val.toLocaleString('de-DE');
+            document.getElementById('usage-value').textContent = val.toLocaleString('en-US');
             
             const price = Math.round(9 + (val / 1000) * 2);
             document.getElementById('price-output').textContent = price;
