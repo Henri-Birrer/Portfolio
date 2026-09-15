@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holz & Design | Schreinerei & AI-Service</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #f8fafc; color: #1e293b; line-height: 1.6; }
+
+        /* Navigation */
+        nav { background: #0f172a; padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 900; }
+        .logo { font-size: 24px; font-weight: bold; color: white; }
+        .logo span { color: #3b82f6; }
+        nav a { color: #94a3b8; text-decoration: none; margin-left: 20px; font-weight: 500; }
+        nav a:hover { color: #3b82f6; }
+
+        /* Hero Header */
+        header { background: linear-gradient(135deg, #0f172a, #1e293b); color: white; padding: 100px 20px; text-align: center; }
+        header h1 { font-size: 48px; margin-bottom: 15px; }
+        header p { font-size: 20px; color: #94a3b8; max-width: 600px; margin: 0 auto 30px; }
+        .btn { display: inline-block; background: #3b82f6; color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; }
+
+        /* Sections */
+        section { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
+        section h2 { text-align: center; font-size: 32px; margin-bottom: 40px; color: #0f172a; }
+
+        /* Grid Layouts */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .card h3 { color: #3b82f6; margin-bottom: 10px; font-size: 22px; }
+
+        /* Stats Section */
+        .stats { background: #3b82f6; color: white; text-align: center; border-radius: 16px; padding: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+        .stat-item h4 { font-size: 36px; }
+
+        /* Footer */
+        footer { background: #0f172a; color: #64748b; text-align: center; padding: 30px; margin-top: 40px; }
+
+        /* Chatbot Widget */
+        #chat-widget { position: fixed; bottom: 25px; right: 25px; z-index: 1000; }
+        #chat-toggle { background: #3b82f6; color: white; border: none; padding: 15px 22px; border-radius: 50px; cursor: pointer; font-weight: bold; font-size: 16px; box-shadow: 0 10px 25px rgba(59,130,246,0.4); transition: 0.2s; }
+        #chat-toggle:hover { transform: scale(1.05); }
+        #chat-box { display: none; width: 350px; height: 450px; background: white; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); overflow: hidden; position: absolute; bottom: 70px; right: 0; flex-direction: column; }
+        .chat-header { background: #0f172a; color: white; padding: 18px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+        .chat-content { flex: 1; padding: 15px; overflow-y: auto; background: #f8fafc; display: flex; flex-direction: column; gap: 10px; }
+        .msg { padding: 10px 14px; border-radius: 12px; font-size: 14px; max-width: 85%; line-height: 1.4; }
+        .bot { background: #e2e8f0; color: #0f172a; align-self: flex-start; }
+        .user { background: #3b82f6; color: white; align-self: flex-end; }
+        .chat-input-area { display: flex; border-top: 1px solid #e2e8f0; background: white; }
+        .chat-input-area input { flex: 1; border: none; padding: 15px; outline: none; }
+        .chat-input-area button { background: #3b82f6; color: white; border: none; padding: 0 20px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Holz & <span>Design</span></div>
+        <div>
+            <a href="#leistungen">Leistungen</a>
+            <a href="#projekte">Projekte</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Perfektion aus Meisterhand</h1>
+        <p>Maßgefertigte Möbel, modernster Innenausbau und digitaler Service für Ihr Zuhause.</p>
+        <a href="#kontakt" class="btn">Jetzt Projekt anfragen</a>
+    </header>
+
+    <section id="leistungen">
+        <h2>Unsere Spezialgebiete</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Moderne Küchen</h3>
+                <p>Individuelle Kochinseln und maßgeschneiderte Schränke, exakt angepasst an Ihren Wohnraum.</p>
+            </div>
+            <div class="card">
+                <h3>Möbel nach Maß</h3>
+                <p>Tische, Einzelstücke und Einbauschränke aus nachhaltigen, hochwertigen Hölzern.</p>
+            </div>
+            <div class="card">
+                <h3>Komplett-Ausbau</h3>
+                <p>Böden, Türen und Deckenverkleidungen für Wohnungen, Büros und Geschäftsräume.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="stats">
+            <div class="stat-item">
+                <h4>15+</h4>
+                <p>Jahre Erfahrung</p>
+            </div>
+            <div class="stat-item">
+                <h4>250+</h4>
+                <p>Projekte</p>
+            </div>
+            <div class="stat-item">
+                <h4>100%</h4>
+                <p>Qualität</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projekte">
+        <h2>Ausgewählte Arbeiten</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Villa in Eiche</h3>
+                <p>Kompletter Innenausbau eines Einfamilienhauses mit massiver Eiche.</p>
+            </div>
+            <div class="card">
+                <h3>Minimalistische Küche</h3>
+                <p>Grifflose Fronten mit integrierter LED-Beleuchtung und Granitplatte.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <h2>Kontakt aufnehmen</h2>
+        <div class="card" style="text-align: center;">
+            <p>Rufen Sie uns an oder nutzen Sie unseren <b>KI-Assistenten unten rechts</b> für schnelle Fragen!</p>
+            <br>
+            <p>📧 info@holz-design-beispiel.de | 📞 0123 / 456 789</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Holz & Design · Erstellt mit AI Web Development</p>
+    </footer>
+
+    <!-- KI Chatbot -->
+    <div id="chat-widget">
+        <button id="chat-toggle" onclick="toggleChat()">💬 Live Chat</button>
+        <div id="chat-box">
+            <div class="chat-header">
+                <span>Holz & Design Bot</span>
+                <span style="cursor:pointer;" onclick="toggleChat()">✕</span>
+            </div>
+            <div class="chat-content" id="chat-messages">
+                <div class="msg bot">Hallo! Ich bin der digitale Assistent. Wie kann ich helfen? (z.B. Fragen zu Küchen, Preisen oder Terminen)</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="user-input" placeholder="Schreibe eine Nachricht..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const box = document.getElementById('chat-box');
+            box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('user-input');
+            const messages = document.getElementById('chat-messages');
+            const text = input.value.trim();
+
+            if (text !== '') {
+                // User Message
+                const userMsg = document.createElement('div');
+                userMsg.className = 'msg user';
+                userMsg.textContent = text;
+                messages.appendChild(userMsg);
+                input.value = '';
+
+                // Bot Logic
+                setTimeout(() => {
+                    const botMsg = document.createElement('div');
+                    botMsg.className = 'msg bot';
+                    
+                    const query = text.toLowerCase();
+                    if (query.includes('preis') || query.includes('kosten')) {
+                        botMsg.textContent = 'Unsere Preise hängen vom Material und Umfang ab. Schreiben Sie uns kurz eine E-Mail für ein kostenloses Angebot!';
+                    } else if (query.includes('küche') || query.includes('kueche')) {
+                        botMsg.textContent = 'Wir planen maßgefertigte Küchen! Schauen Sie unter dem Punkt "Projekte" für Inspirationen.';
+                    } else if (query.includes('termin') || query.includes('kontakt')) {
+                        botMsg.textContent = 'Sie erreichen uns per Mail an info@holz-design-beispiel.de oder telefonisch unter 0123 / 456 789.';
+                    } else {
+                        botMsg.textContent = 'Vielen Dank für Ihre Nachricht! Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.';
+                    }
+
+                    messages.appendChild(botMsg);
+                    messages.scrollTop = messages.scrollHeight;
+                }, 600);
+
+                messages.scrollTop = messages.scrollHeight;
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') sendMessage();
+        }
+    </script>
+</body>
+</html>
